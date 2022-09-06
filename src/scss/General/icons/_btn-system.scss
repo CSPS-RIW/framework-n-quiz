@@ -1,0 +1,132 @@
+/* ***************************************************************
+* IMPORTANT
+* ***************************************************************
+* TO AVOID THE SYSTEM SLOWING DOWN, I "excluded" this file
+* from the compiling. to recompile btn-system, remove the 
+* underscore from the file and compile.
+* *************************************************************/
+
+
+@use "./../../_colors"as *;
+/*
+@use "./_mixins"as *;
+@use "./iconpacks/_iconpacks"as *;
+@use "./_ribbons"as *4;
+*/
+
+
+
+
+
+//-------- BORDERS
+// $border-radius:0px;
+
+// $icon-border-color:$btn-border-color;
+// $icon-border-color-hover:$btn-border-color-hover;
+// $icon-border-color-focus:$btn-border-color-hover;
+
+// //-------- SIZE
+// $small-btn:30px;
+// $large-btn:55px;
+
+// $big-padding:15px;
+// $small-padding:5px;
+
+// /* *******************************************************************
+//  * BUTTON ENGINE
+//  * ***************************************************************** */
+
+// button[class*=snap-],
+// input[type='button'][class*=snap-],
+// input[type='file'][class*=snap-] {
+
+//     background-color: $btn-bg-color;
+
+
+//     height: 45px;
+//     position: relative;
+//     border-color: $icon-border-color;
+//     text-align: left;
+//     transition: background-color 0.2s,
+//         opacity 0.2s;
+//     border-width: 1px;
+
+//     &:before {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         border: transparent solid 2px;
+//         border-radius: 0px !important;
+
+
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         //background-size:contain;
+//         top: 0px;
+//         left: 0px;
+//     }
+
+//     &:hover,
+//     &:focus {
+//         color: $btn-txt-color-hover;
+//         background-color: $btn-bg-color-hover;
+//         border-color: $icon-border-color-hover;
+//     }
+
+
+
+// }
+
+// //--------------------JUST ICON------------------
+// button.snap-xs {
+//     display: inline;
+//     text-indent: -9999px;
+//     overflow: hidden;
+//     white-space: nowrap;
+
+// }
+
+// //-------------- smol height--------------
+// button.snap-md,
+// button.snap-sm,
+// button.snap-xs {
+//     padding: 0px 10px 0px 50px;
+
+//     &:before {
+//         @include iconsize($small-btn, 5px 7px);
+//     }
+
+
+// }
+
+// //-------------- BIG height--------------
+// button.snap-lg,
+// button.snap-xl {
+//     padding: 1px 15px 1px 100px;
+//     min-height: 100px;
+
+//     &:before {
+//         @include iconsize($large-btn, 20px);
+//     }
+
+
+// }
+
+// //--------------FULL WIDTH --------------
+// button.snap-md,
+// button.snap-lg,
+// button.snap-xl {
+//     width: 100%;
+//     margin-bottom: 10px;
+
+// }
+
+
+// //-------------- ONLY XS--------------
+// button.snap-xs {
+//     width: 45px;
+//     padding-left: 0px;
+
+// }
+
+// @include loopIcons($o-ico-packs);

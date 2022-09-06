@@ -1,0 +1,117 @@
+@use '../colors'as *;
+
+/* **************************************************
+ * GENERAL
+ * *************************************************/
+// that little h1 line
+
+h1 {
+    // padding-bottom: 40px;
+
+    // &:after {
+
+    //     content: '';
+    //     position: absolute;
+    //     margin-top: 27px;
+    //     display: block;
+    //     //background-color: $slate-blue;
+    //     //background-image: linear-gradient(to right, $slate-blue, white);
+    //     height: 1px;
+
+    //     background-color: $horizontal-rule;
+    //     width: 100%;
+
+    // }
+}
+
+/* **************************************************
+ * Banners
+ * *************************************************/
+// ----hero header ------
+$banner-bg-darkness:$slate-blue;
+$banner-bg-lightness:$system-gray;
+$conclusion-border-bottom-color:$slate-blue;
+$intersect-container-bg:$slate-blue;
+
+$banner-dark-text:$body-grey;
+$banner-light-text:$white-heat;
+
+/* **************************************************
+ * jumbotron
+ * *************************************************/
+// #3a539b ->  $true-blue
+$jumbotron-bg-color:$true-blue;
+
+/* **************************************************
+ * Block Quote
+ * *************************************************/
+
+$blockquote-text-color:$slate-blue;
+$blockquote-color:$true-blue;
+$blockquote-border-color:#6396bb; //replace with system gray ? 
+
+
+$blockquote-quotemark-color:$slate-blue;
+/* **************************************************
+ * BUTTONS
+ * *************************************************/
+$button-dark-bg:$slate-blue;
+$button-light-txt:$white-heat;
+
+$button-light-bg:$system-gray;
+$button-dark-txt:$body-grey;
+
+$button-dark-border:$slate-blue;
+$button-light-border:$system-gray;
+
+$button-active-bg:$slate-blue;
+/* **************************************************
+ * LISTS
+ * *************************************************/
+$lists-text-color:$true-blue; //$body-grey;
+$list-icons-color:$true-blue;
+
+$list-square-color:$true-blue;
+
+/* **************************************************
+ * TABLES
+ * *************************************************/
+$table-header-bg:$slate-blue;
+
+
+/* **************************************************
+ * CALLOUT
+ * *************************************************/
+$image-callout-bg:$slate-blue;
+/* **************************************************
+ * CARDS
+ * *************************************************/
+$card-bg:$slate-blue;
+$card-border-color:$true-blue;
+$flip-arrow-color:$slate-blue;
+
+
+/* **************************************************
+ * ACCORDIONS
+ * *************************************************/
+$accordion-light-text:$white-heat;
+$accordion-dark-bg:$slate-blue;
+$accordion-borders:$true-blue;
+$accordion-borders-pale:#6396bb; // ??
+
+/* **************************************************
+ * TABS
+ * *************************************************/
+$active-tab-bg-color:$true-blue;
+$tabs-border-color:$true-blue;
+$tabs-text-color:$true-blue;
+
+$panel-main-color:$true-blue;
+
+/* **************************************************
+ * MISC
+ * *************************************************/
+
+$instructions-color:$body-grey;
+$instructions-icon-color:$icon-default-color;
+$instructions-icon-bg-color:$icon-default-bg;

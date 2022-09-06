@@ -1,0 +1,42 @@
+{
+  "name": "bs_custom_templates",
+  "version": "3.2.0",
+  "description": "Friendly way to add custom code to BS pages that follows the style guide.",
+  "main": "src/js/interactions.js",
+  "scripts": {
+    "sass-compile": "gulp sass",
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "new-page": "gulp createNewPage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://CSPS-EFPC-CourseDev@dev.azure.com/CSPS-EFPC-CourseDev/Courses/_git/BS_Custom_Templates"
+  },
+  "keywords": [
+    "bs"
+  ],
+  "author": "CSPS",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.12",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.52.3"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "safari 13",
+    "ie 11"
+  ],
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}

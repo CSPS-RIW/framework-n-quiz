@@ -1,0 +1,106 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/*========= Panels ==========*/
+.data .two-col-panels .card,
+.data .stacked-panels .card {
+    border: 2px solid $panel-main-color;
+}
+
+.data .two-col-panels .card .card-body h2,
+.data .two-col-panels .card .card-body h3,
+.data .two-col-panels .card .card-body h4,
+.data .two-col-panels .card .card-body h5,
+.data .two-col-panels .card .card-body h6,
+.data .two-col-panels .card .card-body .card-header,
+.data .stacked-panels .card .card-body h2,
+.data .stacked-panels .card .card-body h3,
+.data .stacked-panels .card .card-body h4,
+.data .stacked-panels .card .card-body h5,
+.data .stacked-panels .card .card-body h6,
+.data .stacked-panels .card .card-body .card-header {
+    color: $panel-main-color;
+}
+
+
+/* Two Column Panels and Stacked Panels */
+.two-col-panels,
+.stacked-panels {
+    margin: auto;
+}
+
+.two-col-panels .card:after,
+.stacked-panels .card:after {
+    content: ' ';
+    position: absolute;
+    z-index: 100;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 10px solid #edeef1;
+    border-radius: 4px;
+}
+
+.two-col-panels .card,
+.stacked-panels .card {
+    position: relative;
+    border-radius: 0;
+    background-color: #edeef1;
+}
+
+.two-col-panels .card .card-body,
+.stacked-panels .card .card-body {
+    padding: 0.9375rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .two-col-panels .card .card-body,
+    .stacked-panels .card .card-body {
+        padding: 0.9375rem;
+    }
+}
+
+.two-col-panels .card .card-body h2,
+.two-col-panels .card .card-body h3,
+.two-col-panels .card .card-body h4,
+.two-col-panels .card .card-body h5,
+.two-col-panels .card .card-body h6,
+.two-col-panels .card .card-body .card-header,
+.stacked-panels .card .card-body h2,
+.stacked-panels .card .card-body h3,
+.stacked-panels .card .card-body h4,
+.stacked-panels .card .card-body h5,
+.stacked-panels .card .card-body h6,
+.stacked-panels .card .card-body .card-header {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+}
+
+.two-col-panels .card .card-body ol,
+.two-col-panels .card .card-body p,
+.two-col-panels .card .card-body ul,
+.stacked-panels .card .card-body ol,
+.stacked-panels .card .card-body p,
+.stacked-panels .card .card-body ul {
+    color: #222222;
+    line-height: 1.75rem;
+}
+
+/* Two Column Panels */
+.two-col-panels {
+    margin: auto 0.9375rem;
+}
+
+.two-col-panels .card {
+    margin: 0.9375rem;
+}
+
+/* Stacked Panels */
+.stacked-panels .card {
+    margin-bottom: 1.875rem;
+}

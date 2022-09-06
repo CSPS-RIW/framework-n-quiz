@@ -1,0 +1,58 @@
+/* **************************************************
+ * Custom styles for magnific-popup
+ * *************************************************/
+
+@use '../../colors'as *;
+@use '../../utils/mixins/breakpoints'as *;
+
+//  backdrop bug fix on learner view bs
+.mfp-container::before {
+    height: auto;
+}
+
+
+.mfp-close {
+    &:focus:not(#ftrClose) {
+        outline: #000 solid 2px;
+    }
+}
+
+.modal-content {
+    max-width: 80%;
+    width: 17em;
+
+    @include breakpoint(small) {
+        // Tablets
+        width: 35em;
+    }
+
+    @include breakpoint(large) {
+        // Laptops
+        width: 60em;
+
+    }
+}
+
+
+// Footer
+
+.modal-footer {
+    #ftrClose {
+        position: relative;
+        width: 4em;
+        left: -6em;
+        border: 1px solid $slate-blue;
+
+        @include breakpoint(small) {
+            left: -19em;
+        }
+
+        @include breakpoint(large) {
+            left: -37em
+        }
+
+        &.mfp-close {
+            color: opacity(1);
+        }
+    }
+}

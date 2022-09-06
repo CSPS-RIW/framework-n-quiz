@@ -1,0 +1,391 @@
+@use '../colors'as *;
+@use '../General/icons/mixins'as *;
+
+/*========= Click and Reveals ==========*/
+.card-reveal {
+    border: 1px solid $card-border-color !important;
+    border-radius: 5px;
+
+
+    .card-body {
+        padding: 1.875rem;
+
+        .card-icon img {
+            min-height: 108px;
+            min-width: 108px;
+        }
+    }
+
+
+
+    .btn-reveal,
+    .collapse,
+    .collapsing {
+        margin-top: 1.875rem;
+    }
+
+    .btn-reveal {
+        margin-bottom: 0;
+    }
+}
+
+.overlay-content .btn-secondary {
+    border-color: #ffffff;
+}
+
+.overlay-click-reveal {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .overlay-click-reveal .overlay-content .bg-lightness p,
+    .overlay-click-reveal .overlay-content .bg-lightness a,
+    .overlay-click-reveal .overlay-content .bg-lightness ol,
+    .overlay-click-reveal .overlay-content .bg-lightness ul {
+        font-size: 1.125rem;
+    }
+}
+
+.table-reveal thead tr {
+    background: $table-header-bg;
+}
+
+.table-reveal thead tr th {
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 1.25rem;
+}
+
+.table-reveal tbody tr th {
+    background: #edeef1;
+    font-size: 1.25rem;
+    color: #222222;
+}
+
+/* ******************************************************************
+ * flip card SET
+ * *****************************************************************/
+.flip-card-set {
+    .flip-card {
+        margin-bottom: 0.9375rem;
+        vertical-align: top;
+        min-height: 300px;
+
+        .flip-card-content {
+            position: relative;
+            width: 100%;
+
+            &:focus,
+            &:hover {
+                border-radius: 5px;
+                -webkit-box-shadow: 0 0 0 2px $card-border-color;
+                box-shadow: 0 0 0 2px $card-border-color;
+                outline: none;
+
+            }
+
+            /* *********************************FRONT and BACK********************/
+            .flip-card-front,
+            .flip-card-front {
+                outline-color: $card-border-color;
+                border: 1px solid #c9cdd4;
+                border-radius: 5px;
+                background-color: #ffffff;
+                -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+                overflow-y: hidden;
+                padding: 1.875rem 1.875rem 2.5rem;
+
+                img {
+                    max-width: 100%;
+                }
+
+                // ---------------HEADERS
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .card-header {
+                    &:first-child {
+
+                        color: #222222;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        line-height: 1.75rem;
+                        padding-top: 0;
+                        margin-top: 0;
+                        margin-bottom: 0.625rem;
+                    }
+                }
+            }
+
+            /* *********************************FRONT********************/
+            .flip-card-front {
+                //arrow right
+                @include getcode(rightcurvearrow, $flip-arrow-color);
+                background-color: white;
+                background-repeat: no-repeat;
+                background-position: bottom 1.3125rem right 1.3125rem;
+                background-size: 2rem;
+
+                // ---------------HEADERS
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .card-header,
+                ol,
+                ul,
+                p {
+                    color: $body-grey;
+
+                    &:first-child {
+                        color: $body-grey;
+                    }
+                }
+
+                &.bg-img-wrapper {
+                    background: none;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    padding: 0;
+                    position: relative;
+
+                    .flip-card-front-body {
+                        //arrow right
+                        @include getcode(rightcurvearrow, $flip-arrow-color);
+                        background-color: white;
+                        background-repeat: no-repeat;
+                        background-position: bottom 1.3125rem right 1.3125rem;
+                        background-size: 2rem;
+                        margin-top: 60%;
+                        padding: 1.875rem;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+
+                        p:first-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+
+
+
+            }
+
+            /* *********************************BACK********************/
+            .flip-card-back {
+                //arrow left
+                @include getcode(leftcurvearrow, $flip-arrow-color);
+                background-color: white;
+                background-repeat: no-repeat;
+                background-position: bottom 1.3125rem left 1.3125rem;
+                background-size: 2rem;
+
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .card-header {
+
+                    &:first-child,
+                    ol,
+                    ul,
+                    p {
+                        color: $body-grey;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
+
+
+
+
+
+// what the ... 
+.flip-card-set .flip-card .flip-card-content .flip-card-front .flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body h2:nth-child(2),
+.flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body h3:nth-child(2),
+.flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body h4:nth-child(2),
+.flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body h5:nth-child(2),
+.flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body h6:nth-child(2),
+.flip-card-set .flip-card .flip-card-content .flip-card-front.bg-img-wrapper .flip-card-front-body .card-header:nth-child(2) {
+    color: #222222;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+}
+
+
+
+
+
+
+/* Animation */
+.flip-card-set .flip-card {
+    display: grid;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.flip-card-set .flip-card .flip-card-content {
+    cursor: pointer;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: 'frontAndBack';
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.flip-card-set .flip-card .flip-card-content .flip-card-front,
+.flip-card-set .flip-card .flip-card-content .flip-card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flip-card-set .flip-card .flip-card-content .flip-card-front {
+    grid-area: frontAndBack;
+}
+
+.flip-card-set .flip-card .flip-card-content .flip-card-back {
+    grid-area: frontAndBack;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flip-card-set .flip-card .flip-card-content.apply-flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+/*========= Interest Cards ==========*/
+.card-columns {
+    /* Revised to use breakout button technique outlined here: https://hankchizljaw.com/wrote/create-a-semantic-breakout-button-to-make-an-entire-element-clickable/ */
+
+    .blockquote {
+        padding: 0 0.9375rem;
+    }
+
+    .image-box {
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-box img {
+        max-width: 100%;
+        /*transition: all 0.3s;*/
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+    }
+
+    .image-box:hover img {
+        transform: scale(1.1);
+    }
+
+    .card {
+        position: relative;
+    }
+
+    .card.bg-primary {
+        color: black !important;
+    }
+
+    .card.bg-primary .blockquote-footer {
+        border-top-color: black;
+        color: black;
+    }
+
+    .card.card-interact:hover,
+    .card.card-interact.bg-primary:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.7) !important;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    .card.card-interact:hover,
+    .card-columns .card.card-interact:hover h1,
+    .card.card-interact:hover h2,
+    .card.card-interact:hover h3,
+    .card.card-interact:hover h4,
+    .card.card-interact:hover h5,
+    .card.card-interact:hover p,
+    .card.card-interact:hover .text-muted,
+    .card.card-interact.bg-primary:hover h1,
+    .card.card-interact.bg-primary:hover h2,
+    .card.card-interact.bg-primary:hover h3,
+    .card.card-interact.bg-primary:hover h4,
+    .card.card-interact.bg-primary:hover h5,
+    .card.card-interact.bg-primary:hover p,
+    .card.card-interact.bg-primary:hover .text-muted {
+        color: white !important;
+    }
+
+    .card.card-interact:hover .blockquote-footer,
+    .card.card-interact.bg-primary:hover .blockquote-footer {
+        border-top-color: white;
+        color: white;
+    }
+
+    .card.card-interact:hover img,
+    .card.card-interact.bg-primary:hover img {
+        opacity: 0.5;
+        background: rgba(0, 0, 0, 0.7);
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    .btn-breakout {
+        cursor: pointer;
+        position: static;
+    }
+
+    .btn-breakout::before {
+        cursor: pointer;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    blockquote {
+        margin: 3.125rem 0;
+    }
+
+}

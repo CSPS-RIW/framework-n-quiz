@@ -1,0 +1,188 @@
+@use '../../colors'as c;
+@use'../../utils/mixins/breakpoints'as b;
+@use '../icons/mixins'as m;
+
+/* --------------------- usage ----------------------------
+ * 
+   <p class="icon icon-bulb">Change bulb to another classname</p>
+
+   --------------------- how to add an icon ----------------------------
+
+   @include m.getcode(iconname, color);
+
+ * ----------------------------------------------------------------------*/
+
+
+/* **************************************************
+ * Reusable icon classes
+ * *************************************************/
+$icon-color: c.$school-purple;
+$icon-bg-color: c.$system-gray;
+
+.icon {
+   position: relative;
+   color: c.$body-grey;
+   font-weight: bold;
+   // line-height: 3rem;
+   padding-top: 0.5rem;
+   padding-left: 3rem;
+
+
+   &.icon- {
+      &bulb {
+         // Add styles to .icon-bulb text
+
+         &::before {
+            // style icon
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2.3em;
+            height: 2.3em;
+            left: 0;
+            top: 0;
+            // -----ICON
+            @include m.getcode(dyk, $icon-color);
+            background-repeat: no-repeat;
+            background-position: center; //50% 0;
+            background-size: 40%;
+            // ----background circle
+            background-color: $icon-bg-color;
+            border-radius: 50%;
+         }
+      }
+
+      &warning {
+
+         &::before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2.3em;
+            height: 2.3em;
+            left: 0;
+            top: 0;
+            // -----ICON
+            @include m.getcode(warning, $icon-color);
+            background-repeat: no-repeat;
+            background-position: center; //50% 0;
+            background-size: 70%;
+            // ----background circle
+            background-color: $icon-bg-color;
+            border-radius: 50%;
+         }
+      }
+
+      &a11y {
+
+         &::before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2.3em;
+            height: 2.3em;
+            left: 0;
+            top: 0;
+            // -----ICON
+            @include m.getcode(a11y, $icon-color);
+            background-repeat: no-repeat;
+            background-position: center; //50% 0;
+            background-size: 70%;
+            // ----background circle
+            background-color: $icon-bg-color;
+            border-radius: 50%;
+         }
+      }
+
+      &tip {
+
+         &::before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2.3em;
+            height: 2.3em;
+            left: 0;
+            top: 0;
+            // -----ICON
+            @include m.getcode(tip, $icon-color);
+            background-repeat: no-repeat;
+            background-position: center; //50% 0;
+            background-size: 40%;
+            // ----background circle
+            background-color: $icon-bg-color;
+            border-radius: 50%;
+         }
+      }
+
+      &click {
+
+         &::before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2.3em;
+            height: 2.3em;
+            left: 0;
+            top: 0;
+            // -----ICON
+            @include m.getcode(click, $icon-color);
+            background-repeat: no-repeat;
+            background-position: center; //50% 0;
+            background-size: 40%;
+            // ----background circle
+            background-color: $icon-bg-color;
+            border-radius: 50%;
+         }
+      }
+
+
+   }
+
+}
+
+.instruction {
+   position: relative;
+   /* Add visual styling to Instruction Text for Interactive elements - for example Accordions, Flip Cards and Tabs. */
+   color: c.$body-grey;
+   font-weight: bold;
+   /* Mobile Sizing - up to $screen-md*/
+   line-height: 3rem;
+   padding-left: 3rem;
+
+
+   /* Tablet and up Sizing - from $screen-md*/
+   &:before {
+
+      content: '';
+      display: block;
+      position: absolute;
+
+      // -----position
+      width: 2.3em;
+      height: 2.3em;
+      left: 0;
+      top: 0;
+      // -----ICON
+      @include m.getcode(handselect, $icon-color);
+      background-repeat: no-repeat;
+      background-position: center; //50% 0;
+      background-size: 40%;
+      // ----background circle
+      background-color: $icon-bg-color;
+      border-radius: 50%;
+   }
+
+}
+
+
+
+/* --------------------- how to add an icon ----------------------------
+ * 
+   @include m.getcode(iconname, color);
+
+ * ----------------------------------------------------------------------*/

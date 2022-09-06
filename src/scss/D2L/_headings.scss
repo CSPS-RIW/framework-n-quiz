@@ -1,0 +1,40 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/* Hero header */
+h1.hero-header,
+.h1.hero-header,
+h2.hero-header,
+.h2.hero-header,
+h3.hero-header,
+.h3.hero-header,
+h4.hero-header,
+.h4.hero-header,
+h5.hero-header,
+.h5.hero-header,
+h6.hero-header,
+.h6.hero-header {
+    /* Mobile Sizing - up to $screen-md */
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    /* Tablet and up Sizing - from $screen-md*/
+}
+
+@media screen and (min-width: 768px) {
+
+    h1.hero-header,
+    .h1.hero-header,
+    h2.hero-header,
+    .h2.hero-header,
+    h3.hero-header,
+    .h3.hero-header,
+    h4.hero-header,
+    .h4.hero-header,
+    h5.hero-header,
+    .h5.hero-header,
+    h6.hero-header,
+    .h6.hero-header {
+        font-size: 3.125rem;
+        line-height: 3.5rem;
+    }
+}

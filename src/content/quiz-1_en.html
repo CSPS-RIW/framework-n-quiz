@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- preloaded
+    D2L template to be changed -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet"
+        href="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/css/styles.min.css">
+    <link rel="stylesheet"
+        href="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css"
+        id="D2L_style_bootstrap">
+    <!-- inject:css -->
+    <link rel="stylesheet"
+        href="../thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../css/csps2021_D2L.css" id="D2L_style_csps">
+    <link rel="stylesheet" href="../css/csps2021_WET.css">
+    <!-- endinject -->
+    <title>Custom Page</title>
+</head>
+
+<body>
+    <div class="container-fluid data">
+        <div class="row">
+            <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                <!-- Add your content here -->
+                <!--This is the main div that contains all questions in the set, it must be identified by the "question-set" class-->
+                <div class="question-set">
+                    <h2>Example of a question-set</h2>
+
+                    <div class="question multiple-choice">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>This is an
+                                example of a multiple choice question.</legend>
+                            <div class="answers" data-correct-answer-id="q1-d">
+                                <p>
+                                    <input type="radio" name="q1" id="q1-a"
+                                        aria-posinset="1" aria-setsize="4">
+                                    <label for="q1-a">Answer 1</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-b"
+                                        aria-posinset="2" aria-setsize="4">
+                                    <label for="q1-b">Answer 2</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-c"
+                                        aria-posinset="3" aria-setsize="4">
+                                    <label for="q1-c">Answer 3</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-d"
+                                        aria-posinset="4" aria-setsize="4">
+                                    <label for="q1-d">Answer 4</label>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div class="right">
+                                    <p><strong>Correct!</strong></p>
+                                    <p>Text for the right answer.</p>
+                                    <button onclick="alert('Good')"
+                                        style="display: none;"></button>
+                                </div>
+                                <div class="wrong">
+                                    <p><strong>Incorrect!</strong></p>
+                                    <p>Text for the wrong answer.</p>
+                                    <button onclick="alert('Bad')"
+                                        style="display: none;"></button>
+                                </div>
+                                <div class="generic">
+                                    <p>This is generic feedback text.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="question multiple-choice">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>This is an
+                                example of true/false.</legend>
+                            <div class="answers" data-correct-answer-id="q2-a">
+                                <p>
+                                    <input type="radio" name="q2" id="q2-a"
+                                        aria-posinset="1" aria-setsize="2">
+                                    <label for="q2-a">True</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q2" id="q2-b"
+                                        aria-posinset="2" aria-setsize="2">
+                                    <label for="q2-b">False</label>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div class="right">
+                                    <p><strong>Correct!</strong></p>
+                                    <p>Text for the right answer.</p>
+                                </div>
+                                <div class="wrong">
+                                    <p><strong>Incorrect!</strong></p>
+                                    <p>Text for the wrong answer.</p>
+                                </div>
+                                <div class="generic">
+                                    <p>This is generic feedback text.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="question multiple-answer">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>This is an
+                                example of a multiple answer question.</legend>
+                            <div class="answers" data-correct-answer-id="q3-c q3-b">
+                                <p>
+                                    <input type="checkbox" name="q3" id="q3-a"
+                                        aria-posinset="1" aria-setsize="4">
+                                    <label for="q3-a">Answer 1</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="q3" id="q3-b"
+                                        aria-posinset="2" aria-setsize="4">
+                                    <label for="q3-b">Answer 2</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="q3" id="q3-c"
+                                        aria-posinset="3" aria-setsize="4">
+                                    <label for="q3-c">Answer 3</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="q3" id="q3-d"
+                                        aria-posinset="4" aria-setsize="4">
+                                    <label for="q3-d">All of the above</label>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div class="right">
+                                    <p><strong>Correct!</strong></p>
+                                    <p>Text for the right answer.</p>
+                                </div>
+                                <div class="wrong">
+                                    <p><strong>Incorrect!</strong></p>
+                                    <p>Text for the wrong answer.</p>
+                                </div>
+                                <div class="generic">
+                                    <p>This is generic feedback text.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="question dropdown">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>This is an
+                                example of a fill in the blanks question.</legend>
+                            <div class="answers" data-correct-answer-value="3 4">
+                                <p>
+                                    <label for="q4-a">
+                                        This is a test sentence with a select tag:
+                                        <select id="q4-a">
+                                            <option value="0" disabled selected>Please
+                                                choose</option>
+                                            <option value="1">Answer 1</option>
+                                            <option value="2">Answer 2</option>
+                                            <option value="3">Answer 3</option>
+                                            <option value="4">Answer 4</option>
+                                        </select>
+                                        is an option.
+                                    </label>
+                                    <label for="q4-b">
+                                        This is a test sentence with a select tag:
+                                        <select id="q4-b">
+                                            <option value="0" disabled selected>Please
+                                                choose</option>
+                                            <option value="1">Answer 1</option>
+                                            <option value="2">Answer 2</option>
+                                            <option value="3">Answer 3</option>
+                                            <option value="4">Answer 4</option>
+                                        </select>
+                                        is an option.
+                                    </label>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div class="right">
+                                    <p><strong>Correct!</strong></p>
+                                    <p>Text for the right answer.</p>
+                                </div>
+                                <div class="wrong">
+                                    <p><strong>Incorrect!</strong></p>
+                                    <p>Text for the wrong answer.</p>
+                                </div>
+                                <div class="generic">
+                                    <p>This is generic feedback text.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="question dropdown">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>Read the
+                                paragraph and answer the questions.</legend>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Ipsam beatae sunt temporibus. Maxime aut labore quibusdam
+                                numquam facilis exercitationem, similique necessitatibus
+                                quae eos dolorum sequi, praesentium incidunt, inventore
+                                vitae asperiores porro doloremque cupiditate nemo
+                                voluptatum error veniam fuga. Qui laboriosam consequatur
+                                mollitia ipsam autem asperiores dolorum explicabo enim nam
+                                vitae.</p>
+                            <div class="answers" data-correct-answer-value="3 2">
+                                <p>
+                                    <label for="q5-a"><strong>This is a
+                                            question.</strong></label><br>
+                                    <select id="q5-a"
+                                        style="margin-left: 0; margin-top: 10px;">
+                                        <option value="0" disabled selected>Please choose
+                                        </option>
+                                        <option value="1">Answer 1</option>
+                                        <option value="2">Answer 2</option>
+                                        <option value="3">Answer 3</option>
+                                        <option value="4">Answer 4</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="q5-b"><strong>This is a
+                                            question.</strong></label><br>
+                                    <select id="q5-b"
+                                        style="margin-left: 0; margin-top: 10px;">
+                                        <option value="0" disabled selected>Please choose
+                                        </option>
+                                        <option value="1">Answer 1</option>
+                                        <option value="2">Answer 2</option>
+                                        <option value="3">Answer 3</option>
+                                        <option value="4">Answer 4</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div class="right">
+                                    <p><strong>Correct!</strong></p>
+                                    <p>Text for the right answer.</p>
+                                </div>
+                                <div class="wrong">
+                                    <p><strong>Incorrect!</strong></p>
+                                    <p>Text for the wrong answer.</p>
+                                </div>
+                                <div class="generic">
+                                    <p>This is generic feedback text.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <h2>Still in Beta question-set</h2>
+                    <div class="question custom-feedback">
+                        <fieldset>
+                            <legend><strong>Question
+                                    #&ThinSpace;&ndash;&ThinSpace;</strong>This is an
+                                example of a
+                                custom feedback question.</legend>
+                            <div class="answers">
+                                <p>
+                                    <input type="radio" name="q1" id="q1-a"
+                                        aria-posinset="1" aria-setsize="4">
+                                    <label for="q1-a">Answer 1</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-b"
+                                        aria-posinset="2" aria-setsize="4">
+                                    <label for="q1-b">Answer 2</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-c"
+                                        aria-posinset="3" aria-setsize="4">
+                                    <label for="q1-c">Answer 3</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="q1" id="q1-d"
+                                        aria-posinset="4" aria-setsize="4">
+                                    <label for="q1-d">Answer 4</label>
+                                </p>
+                            </div>
+                            <button class="btn btn-primary submit-btn">Check
+                                Answer</button>
+                            <div class="feedback" role="alert" style="display: none;">
+                                <div data-for="q1-a">
+                                    <p>This is a feedback text for answer 1.</p>
+                                </div>
+                                <div data-for="q1-b">
+                                    <p>This is a feedback text for answer 2.</p>
+                                </div>
+                                <div data-for="q1-c">
+                                    <p>This is a feedback text for answer 3.</p>
+                                </div>
+                                <div data-for="q1-d">
+                                    <p>This is a feedback text for answer 4.</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!-- Content ends here -->
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap
+    JavaScript: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+        src="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js">
+    </script>
+    <script
+        src="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/popper-js/popper.min.js">
+    </script>
+    <script
+        src="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js">
+    </script> <!-- Template JavaScript -->
+    <script
+        src="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/js/scripts.min.js">
+    </script>
+
+    <!-- inject:js -->
+    <script src="../js/question-set.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

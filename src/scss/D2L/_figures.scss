@@ -1,0 +1,116 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/*========= Figures ==========*/
+figure {
+    margin: 0 auto 0.625rem;
+    display: inline-block;
+}
+
+figure p {
+    margin-bottom: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+figure figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    padding-left: 0;
+}
+
+figure figcaption p {
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+}
+
+figure img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+figure.float-left {
+    margin-right: 1.25rem;
+}
+
+figure.float-right {
+    margin-left: 1.25rem;
+}
+
+.img-200 {
+    max-width: 200px;
+}
+
+.img-300 {
+    max-width: 250px;
+}
+
+.img-400 {
+    max-width: 400px;
+}
+
+.img-500 {
+    max-width: 500px;
+}
+
+.img-600 {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    figure {
+        margin-bottom: 0;
+    }
+
+    .img-200 {
+        max-width: 20%;
+    }
+
+    .img-300 {
+        max-width: 30%;
+    }
+
+    .img-400 {
+        max-width: 50%;
+    }
+
+    .img-500 {
+        max-width: 60%;
+    }
+
+    .img-600 {
+        max-width: 66%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .img-300 {
+        max-width: 300px;
+    }
+
+    .img-400 {
+        max-width: 400px;
+    }
+
+    .img-500 {
+        max-width: 500px;
+    }
+
+    .img-600 {
+        max-width: 550px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .img-600 {
+        max-width: 600px;
+    }
+}

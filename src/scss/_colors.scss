@@ -1,0 +1,113 @@
+/* **************************************************
+ * Color scheme
+ * *************************************************/
+
+$school-purple:#3f2a56;
+
+$slate-blue:#4e5b73;
+$true-blue:#1c578a;
+
+$system-gray:#f1f5fb;
+$body-grey:#333;
+
+$white-heat:#fff;
+$horizontal-rule:#ddd;
+
+$hyperlink-blue:#2b4380;
+$hyperlink-hover:#0535d2;
+$hyperlink-visited:#7834bc;
+
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+/* **************************************************
+  * default colors
+  * *************************************************/
+$icon-default-color:$school-purple;
+$icon-default-bg:$system-gray;
+//buttons
+
+
+/* **************************************************
+* BUTTONS
+* *************************************************/
+$btn-txt-color:$body-grey;
+$btn-txt-color-hover:$white-heat;
+
+$btn-icon-color:$icon-default-color;
+$btn-icon-color-hover:$white-heat;
+
+$btn-bg-color:$system-gray;
+$btn-bg-color-hover:$slate-blue;
+
+$btn-border-color:$slate-blue;
+$btn-border-color-hover:transparent;
+
+$button-dark-bg: $slate-blue;
+$button-dark-border: $slate-blue;
+$button-light-txt: $white-heat;
+$button-active-bg: $slate-blue;
+
+/* **************************************************
+  * BLOCKQUOTES
+  * *************************************************/
+$blockquote-border-color:#6396bb;
+$blockquote-text-color: $slate-blue;
+$blockquote-color: $true-blue;
+
+/* **************************************************
+    * LISTS
+    * *************************************************/
+$list-icons-color: $true-blue;
+$list-square-color: $true-blue;
+
+/* **************************************************
+* BANNER
+* *************************************************/
+$banner-light-text: $white-heat;
+$banner-bg-darkness: $slate-blue;
+$banner-bg-lightness: $system-gray;
+$banner-dark-text: #000000;
+$intersect-container-bg: $slate-blue;
+$conclusion-border-bottom-color: $slate-blue;
+
+/* **************************************************
+* JUMBOTRON
+* *************************************************/
+$jumbotron-bg: $true-blue;
+
+/* **************************************************
+* PANELS
+* *************************************************/
+$panel-main-color: $true-blue;
+
+/* **************************************************
+* TABLES
+* *************************************************/
+$table-header-bg: $slate-blue;
+
+/* **************************************************
+* ACCORDIONS
+* *************************************************/
+$accordion-borders: #6396bb;
+$accordion-title-bg-expanded: $slate-blue;
+$accordion-light-text: $white-heat;
+$accordion-dark-bg: $slate-blue;
+$accordion-borders-pale: $accordion-borders;
+
+/* **************************************************
+* CARDS
+* *************************************************/
+$card-border-color: $slate-blue;
+$flip-arrow-color: $school-purple;
+
+/* **************************************************
+* TABS
+* *************************************************/
+$tabs-text-color: $true-blue;
+$tabs-border-color: $true-blue;
+$active-tab-bg-color: $true-blue;

@@ -1,0 +1,457 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+@use '../General/icons/mixins'as m;
+
+/*========= Lists ==========*/
+
+
+@media screen and (min-width: $breakpoint-tablet) {
+
+    ol,
+    ul {
+        font-size: 1.1875rem;
+    }
+}
+
+ol,
+ul {
+    li {
+        margin-bottom: 0;
+        position: relative;
+
+        ul,
+        ol {
+
+            margin-top: 0.625rem;
+            margin-bottom: 0.625rem;
+        }
+    }
+}
+
+
+ul {
+    list-style: none;
+
+    li {
+        padding-left: 0.625rem;
+
+        &::before {
+            color: #000000;
+            content: '\2022';
+            display: inline-block;
+            font-size: 0.9375rem;
+            margin-top: 3px;
+            margin-left: -1.5rem;
+            position: absolute;
+            text-align: center;
+
+        }
+    }
+
+    ol {
+        list-style: decimal;
+
+        li::before {
+            background: none;
+            border: none;
+            content: '';
+        }
+
+        li ol {
+            list-style: lower-alpha;
+
+        }
+
+    }
+}
+
+
+
+ol {
+    li {
+        padding-left: 0.625rem;
+    }
+
+    ol {
+        list-style: lower-alpha;
+    }
+}
+
+
+li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.data ol.large-number {
+    li::before {
+        color: $list-icons-color;
+    }
+
+    ol,
+    ul {
+        li::before {
+            color: #222222;
+
+        }
+    }
+}
+
+
+
+/* Large Number List - usually for Learning Objectives */
+ol.large-number {
+    margin-left: 0;
+    padding-left: 0;
+    counter-reset: item;
+}
+
+ol.large-number li {
+    list-style: none;
+    margin-bottom: 1.375rem;
+    padding-top: 0;
+    padding-left: 3.125rem;
+    padding-bottom: 0;
+    position: relative;
+}
+
+ol.large-number li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #222222;
+    left: 0;
+    margin: 0 0.5rem 0 0;
+    position: absolute;
+    top: -5px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-right: 0.9375rem;
+}
+
+ol.large-number li:nth-child(n + 10)::before {
+    margin-left: -1.0625rem;
+}
+
+ol.large-number ol,
+ol.large-number ul {
+    counter-reset: list;
+    padding-top: 0.9375rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+ol.large-number ol li,
+ol.large-number ul li {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 0.625rem;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+ol.large-number ol li::before,
+ol.large-number ul li::before {
+    background: none;
+    border: none;
+    color: #222222;
+    counter-increment: list;
+    left: -28px;
+    margin: 0.3rem 0.5rem 0 0;
+    top: 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+    width: 2rem;
+}
+
+ol.large-number ol li::before {
+    content: counter(list, lower-roman) ". ";
+    left: -42px;
+    text-align: right;
+}
+
+ol.large-number ul li::before {
+    content: '\2022';
+    font-size: 0.9375rem;
+    margin-top: 6px;
+}
+
+ol.large-number-alt {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol.large-number-alt li {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 1.25rem;
+}
+
+ol.large-number-alt .large-number-counter {
+    color: #222222;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin: -10px 0.9375rem 0 0;
+}
+
+/* Box Number and Box Alpha List */
+.data ol.box-number li::before,
+.data ol.box-alpha li::before {
+    background-color: $list-square-color;
+}
+
+.data ol.box-number ul li::before,
+.data ol.box-alpha ul li::before {
+    background: none;
+    border: none;
+    color: #222222;
+}
+
+
+ol.box-number,
+ol.box-alpha {
+    margin-left: 0;
+    padding-left: 0;
+    counter-reset: li;
+}
+
+ol.box-number .has-child,
+ol.box-alpha .has-child {
+    padding-bottom: 0;
+}
+
+ol.box-number li,
+ol.box-alpha li {
+    list-style: none;
+    padding-left: 3.75rem;
+    padding-bottom: 1.1875rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+ol.box-number li::before,
+ol.box-alpha li::before {
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #ffffff;
+    content: counter(li) ".";
+    counter-increment: li;
+    font-size: 1.1875rem;
+    font-weight: bold;
+    left: 0;
+    line-height: 1.75rem;
+    margin: 4px 8px 0 0;
+    padding: 6px;
+    position: absolute;
+    text-align: center;
+    top: -8px;
+    width: 2.5rem;
+}
+
+ol.box-number ol,
+ol.box-alpha ol {
+    counter-reset: list;
+    padding-top: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ol.box-number ol li,
+ol.box-alpha ol li {
+    padding-bottom: 1.1875rem;
+}
+
+ol.box-number ol li:first-child,
+ol.box-alpha ol li:first-child {
+    margin-top: 1.5625rem;
+}
+
+ol.box-number ol li::before,
+ol.box-alpha ol li::before {
+    content: counter(list, lower-alpha) ".";
+    counter-increment: list;
+}
+
+ol.box-number ul,
+ol.box-alpha ul {
+    margin-left: 0;
+    padding-top: 0;
+}
+
+ol.box-number ul li,
+ol.box-alpha ul li {
+    padding-left: 0.625rem;
+    padding-bottom: 0;
+}
+
+ol.box-number ul li::before,
+ol.box-alpha ul li::before {
+    background: none;
+    border: none;
+    color: #222222;
+    content: '\2022';
+    counter-increment: list;
+    left: -28px;
+    top: -9px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    width: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    ol.box-number ul li::before,
+    ol.box-alpha ul li::before {
+        font-size: 1.125rem;
+    }
+}
+
+/* Box Alpha List */
+ol.box-alpha {
+    counter-reset: letter;
+}
+
+ol.box-alpha li::before {
+    content: counter(letter, lower-alpha) ". ";
+    counter-increment: letter;
+}
+
+ol.box-alpha ol li::before {
+    content: counter(list, lower-roman) ". ";
+    counter-increment: list;
+}
+
+ol.box-alpha ul li::before {
+    background-color: transparent;
+}
+
+/* Icon List */
+ul.list-icon {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ul.list-icon ul,
+ul.list-icon ol {
+    margin-bottom: 0;
+}
+
+ul.list-icon ul li,
+ul.list-icon ol li {
+    padding-bottom: 0;
+}
+
+ul.list-icon li {
+    padding-left: 4rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+}
+
+ul.list-icon li::before {
+    display: none;
+}
+
+ul.list-icon li li {
+    padding-left: 0.625rem;
+}
+
+ul.list-icon li li::before {
+    display: block;
+}
+
+ul.list-icon li li:last-child {
+    padding-bottom: 0;
+}
+
+ul.list-icon span::before {
+    color: #494c4e;
+    font-size: 1.5rem;
+    left: 2.125rem;
+    position: absolute;
+    top: 2px;
+}
+
+ul.list-icon span.fa-check::before {
+    @include m.getcode(facheck, $slate-blue);
+    color: $slate-blue;
+}
+
+
+ul.list-icon .x-icon::before {
+    position: absolute;
+    left: 2.125rem;
+    top: 0;
+    content: '';
+    height: 24px;
+    width: 24px;
+    @include m.getcode(fill, $slate-blue);
+}
+
+@media screen and (min-width: 768px) {
+    ul.list-icon .x-icon::before {
+        top: 2px;
+    }
+}
+
+/* Step List */
+ol.list-step {
+    counter-reset: li;
+    list-style-type: none;
+    padding: 0 0 0 1rem;
+}
+
+ol.list-step li::before {
+    color: $school-purple;
+    content: "Step "counter(li);
+    counter-increment: li;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px;
+}
+
+ol.list-step p {
+    padding-left: 2rem;
+}
+
+/* Lower alpha list*/
+ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+.objectives-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.objectives-list .card {
+    margin: 10px;
+    min-height: 150px;
+}
+
+.objectives-list .card li {
+    margin: 10px;
+}
+
+.objectives-list .card li li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #ffffff !important;
+    left: 0;
+    margin: 0 0.5rem 0 0;
+    background: #c9cdd4;
+    position: absolute;
+    top: -5px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-right: 0.9375rem;
+}

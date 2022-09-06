@@ -1,0 +1,286 @@
+@use '../colors'as *;
+
+/*========= Accordions ==========*/
+/* Accordion: Standard */
+
+.data .accordion {
+
+    margin-top: 5px;
+
+    border-radius: 0;
+
+    margin-bottom: 2em;
+
+    /* Accordion: Numbered */
+    /* Accordion: Alt Icon styling */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .collapsing,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+
+        font-size: 1.25rem;
+    }
+
+    /* =================== NORMAL ACCORDION ==================*/
+
+    & :not(.card-standard):not(.card-graphic).card {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        overflow: visible;
+
+        .card-title {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            button {
+                border: 1px solid #ffffff;
+                border-top: 1px solid #a6a6a6;
+
+                font-size: 1.25rem;
+                line-height: 1.875rem;
+                margin: 0;
+                padding: 0.75rem 1.3125rem;
+                padding-left: 2.875rem;
+                vertical-align: top;
+                position: relative;
+                border-radius: 0;
+                font-weight: 700;
+
+                border-color: #6396bb;
+                color: $slate-blue;
+
+                &::after {
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-size: 1.3125rem;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    position: absolute;
+                    top: 1.125rem;
+                    left: 1.5rem;
+                }
+
+
+                &[aria-expanded='false']:after {
+                    content: '\f105';
+                }
+
+                &[aria-expanded='true'] {
+                    border-top-color: $accordion-borders;
+                    background: $accordion-title-bg-expanded;
+                    color: $accordion-light-text;
+
+
+                    &:after {
+                        content: '\f107';
+                        color: $accordion-light-text;
+
+                    }
+                }
+            }
+        }
+
+        .card-header {
+            background: #ffffff;
+            padding: 0;
+            margin-bottom: -2px;
+
+            button {
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    & :not(.card-standard):not(.card-graphic)>.card-body {
+        background: #ffffff;
+        border: none;
+        padding: 1.875rem;
+        margin-top: -2px;
+        font-weight: 500;
+    }
+
+    /* =================== NUMERIC ACCORDION ==================*/
+    &.accordion-num {
+        counter-reset: accordion;
+
+        :not(.card-standard):not(.card-graphic)>.card-title {
+            button {
+
+
+                padding-left: 5.5rem;
+
+                &::before {
+                    background: $accordion-dark-bg;
+                    border-right: 1px solid $accordion-borders-pale;
+                    border-bottom: 1px solid $accordion-borders;
+                    border-top: 1px solid $accordion-borders;
+                    color: #ffffff;
+                    counter-increment: accordion;
+                    content: counter(accordion);
+                    font-size: 1.3125rem;
+                    width: 54px;
+                    height: 54px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    min-height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                /* --------- EXPANDED ---------*/
+                &[aria-expanded='true']:before {
+
+                    background: $accordion-borders;
+                    color: $accordion-light-text;
+                    border-top-color: $accordion-borders;
+                    border-right-color: $accordion-borders;
+                    border-bottom: none;
+
+                }
+
+                &::after {
+                    left: 4rem;
+                }
+            }
+
+            //bottom border (last element)
+            &:last-child .card-title {
+                border-bottom: 1px solid $accordion-borders-pale;
+            }
+        }
+
+
+    }
+
+
+    &.accordion-alt-icon :not(.card-standard):not(.card-graphic).card .card-title button {
+        margin: 0;
+        padding: 0.75rem 1.3125rem;
+        padding-left: 3.25rem;
+
+        &::after {
+            color: #4e5b73;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-size: 1.3125rem;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            font-weight: 900;
+            position: absolute;
+            top: 1.125rem;
+            left: 1.75rem;
+            height: 14px;
+            width: 14px;
+        }
+
+        &[aria-expanded='true']:after {
+            content: '-';
+            color: #4e5b73;
+            /* Alternate option with background image
+                            background: url(../_assets/img/collapse.svg);
+                            background-size: 14px 14px;
+                            */
+        }
+
+        &[aria-expanded='false']:after {
+            content: '+';
+            /* Alternate option with background image
+                            background: url(../_assets/img/expand.svg);
+                            background-size: 14px 14px;
+                            */
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .accordion.accordion-num :not(.card-standard):not(.card-graphic)>.card-title button {
+        padding-left: 7.5rem;
+
+        &::after {
+            left: 6rem;
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *****************************************************************
+ * CSPS TWEAKS
+ * *****************************************************************/
+
+
+
+body .data .accordion {
+
+    button {
+        background-color: #0000;
+        font-family: "Noto Sans", sans-serif;
+        border-color: $slate-blue;
+        color: $slate-blue;
+
+        &:hover,
+        &:focus {
+            background-color: $slate-blue;
+            color: $white-heat !important;
+        }
+    }
+
+    & :not(.card-standard):not(.card-graphic).card .card-title button[aria-expanded=true] {
+        background-color: $slate-blue;
+        color: $white-heat !important;
+    }
+
+    & :not(.card-standard):not(.card-graphic)>.card-title button:before {
+        background-color: $slate-blue !important;
+        border-right: 1px solid $slate-blue !important;
+        border-bottom: 1px solid $slate-blue !important;
+        border-top: 1px solid $slate-blue !important;
+    }
+
+    .collapsing {
+        font-size: inherit !important;
+
+
+    }
+}

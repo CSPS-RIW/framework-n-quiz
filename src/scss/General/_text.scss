@@ -1,0 +1,98 @@
+// /* **************************************************
+//  * GENERAL
+//  * *************************************************/
+// @use "../colors"as *;
+// @use "../utils/mixins/breakpoints"as b;
+
+// body {
+//     color: $body-grey;
+//     // font-family: 'Lato', 'Arial', sans-serif;
+//     // font-family: 'Noto Sans', 'Arial', sans-serif !important;
+//     // font-size: 20px;
+//     // font-family: "Noto Sans", sans-serif;
+//     // font-size: 20px;
+//     // line-height: 1.65em;
+//     // overflow-x: hidden;
+//     // height: 100%;
+// }
+
+
+// h1,
+// h3,
+// h5 {
+//     color: $slate-blue;
+//     line-height: 1.1em;
+//     font-weight: 400;
+// }
+
+// h2,
+// h2.modal-title,
+// h4,
+// h6 {
+//     color: $true-blue;
+//     line-height: 1.1em;
+//     font-weight: 400;
+// }
+
+// h1 {
+//     font-size: 1.9rem;
+//     margin: 0.625rem 0;
+// }
+
+// h2,
+// h2.modal-title {
+//     font-family: 'Lato', 'Arial', sans-serif;
+//     font-size: 1.75rem;
+// }
+
+// h3 {
+//     font-family: 'Lato', 'Arial', sans-serif;
+//     font-size: 1.625rem;
+// }
+
+// h4 {
+//     font-family: 'Lato', 'Arial', sans-serif;
+//     font-size: 1.5rem;
+// }
+
+// h5 {
+//     font-family: 'Lato', 'Arial', sans-serif;
+//     font-size: 1.125rem;
+// }
+
+
+// p {
+
+// }
+
+
+// a {
+//     color: $hyperlink-blue;
+
+//     &:visited {
+//         color: $hyperlink-visited;
+//         text-decoration: underline;
+//     }
+
+//     &:active,
+//     &:hover,
+//     &:focus {
+//         color: $hyperlink-hover;
+//     }
+// }
+
+// // data h2,
+// // data .h2,
+// // .card-header h2 {
+// //     color: #2a7ab0;
+// // }
+
+// .wrapper {
+//     display: flex;
+
+//     .article {
+//         display: flex;
+//         flex-flow: column nowrap;
+
+//     }
+// }

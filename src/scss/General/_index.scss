@@ -1,0 +1,11 @@
+/* **************************************************
+ * Link your scss partials
+ * *************************************************/
+
+// @forward "./_text";
+
+@forward "./icons/iconclasses";
+@forward "./elements";
+
+@forward "./reusable";
+@forward './components';

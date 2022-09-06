@@ -1,0 +1,127 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/*========= Modals ==========*/
+// .modal-content {
+//     border: 1px solid #c9cdd4;
+//     border-radius: 4px;
+// }
+
+// .modal-content .modal-header {
+//     border-bottom: 0.5px solid #c9cdd4;
+// }
+
+// .modal-content .modal-header h2,
+// .modal-content .modal-header h3,
+// .modal-content .modal-header h4,
+// .modal-content .modal-header h5,
+// .modal-content .modal-header h6 {
+//     font-size: 1.5rem;
+//     font-weight: 600;
+//     color: #222222;
+//     padding: 0;
+// }
+
+// .modal-content .modal-footer {
+//     border-top: 0.5px solid #c9cdd4;
+// }
+
+// .modal-content .close {
+//     color: #222222;
+//     opacity: 1;
+//     font-size: 1.1875rem;
+// }
+
+// .carousel-control-prev-icon.lightbox {
+//     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+// }
+
+// .carousel-control-next-icon.lightbox {
+//     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+// }
+
+// .carousel-control-prev.lightbox,
+// .carousel-control-next.lightbox {
+//     border-bottom: none;
+//     display: inline;
+//     position: static;
+// }
+
+// .carousel-control-next.lightbox {
+//     float: right;
+//     padding-top: 1rem;
+// }
+
+// .carousel-control-prev.lightbox {
+//     float: left;
+//     padding-top: 1rem;
+// }
+
+// .carousel-control-prev.lightbox:visited,
+// .carousel-control-prev.lightbox:hover,
+// .carousel-control-prev.lightbox:active,
+// .carousel-control-prev.lightbox:focus {
+//     border-bottom: none;
+//     opacity: .6;
+//     text-decoration: none !important;
+// }
+
+// .carousel-control-next.lightbox:visited,
+// .carousel-control-next.lightbox:hover,
+// .carousel-control-next.lightbox:active,
+// .carousel-control-next.lightbox:focus {
+//     border-bottom: none;
+//     opacity: .6;
+//     text-decoration: none !important;
+// }
+
+// .modal.fade.show {
+//     padding-top: 0 !important;
+//     padding-left: 0 !important;
+// }
+
+// /*========= Popovers ==========*/
+// .popover,
+// .popover-body {
+//     border: 1px solid #6e7376;
+//     border-radius: 2px;
+//     background-color: #6e7376;
+//     color: #ffffff;
+//     font-size: 1rem;
+//     border-right-color: #6e7376;
+// }
+
+// .popover.bs-popover-top>.arrow:after,
+// .popover-body.bs-popover-top>.arrow:after {
+//     border-top-color: #6e7376 !important;
+// }
+
+// .popover.bs-popover-right>.arrow:after,
+// .popover-body.bs-popover-right>.arrow:after {
+//     border-right-color: #6e7376;
+// }
+
+// .popover.bs-popover-bottom>.arrow:after,
+// .popover-body.bs-popover-bottom>.arrow:after {
+//     border-bottom-color: #6e7376;
+// }
+
+// .popover.bs-popover-left>.arrow:after,
+// .popover-body.bs-popover-left>.arrow:after {
+//     border-left-color: #6e7376;
+// }
+
+// a.popovers-link:hover {
+//     cursor: pointer;
+// }
+
+// .popover-body {
+//     vertical-align: middle;
+//     text-align: center;
+//     background-color: #6e7376;
+//     color: #ffffff;
+//     font-size: 1rem;
+//     width: auto;
+//     padding: 2px 5px;
+//     border-radius: 2px;
+// }

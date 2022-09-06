@@ -1,0 +1,178 @@
+@use '../colors'as *;
+
+/*========= Buttons ==========*/
+button,
+.btn {
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 0.625rem 1.5rem 0.625rem;
+    line-height: 1.25;
+    -webkit-appearance: none;
+
+    /* Default Button and Primary Button - this can be split up if necessary */
+    /* PRIMARY Button */
+    &.btn-primary,
+    &.copy-btn {
+        background-color: $button-dark-bg;
+        border-color: $button-dark-border;
+        color: $button-light-txt;
+
+        &:hover {
+            background-color: #251933;
+            border-color: $button-dark-bg;
+            color: $button-light-txt;
+        }
+
+        &:focus {
+            background-color: $button-dark-bg;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 1px #006fbf;
+
+        }
+
+        &:disabled,
+        &[aria-expanded='true'] {
+
+            //background-color: rgba(63, 42, 86, 0.7);
+            @include background-opacity($slate-blue, 0.7);
+            border-color: background-opacity($slate-blue, 0.7);
+            color: #ffffff;
+
+            &:hover {
+                background-color: background-opacity($slate-blue, 0.7);
+                border-color: background-opacity($slate-blue, 0.7);
+                color: #ffffff;
+
+            }
+
+        }
+
+        &:active,
+        &:active:hover,
+        &:active:focus {
+            background-color: rgba(38, 25, 51, 0.9);
+            border-color: rgba(38, 25, 51, 0.9);
+            color: #ffffff;
+
+        }
+    }
+
+    &.btn-secondary {
+        background-color: #e3e9f1;
+        border-color: #4e5b73;
+        color: #222222;
+
+        &:focus {
+            background-color: #edeef1;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 1px #006fbf;
+        }
+
+        &:hover {
+            background-color: #4e5b73;
+            border-color: #4e5b73;
+            color: #ffffff;
+        }
+
+        &:disabled,
+        &[aria-expanded='true'] {
+            background-color: rgba(237, 238, 241, 0.7);
+            border-color: rgba(237, 238, 241, 0.7);
+            color: #222222;
+
+            &:hover {
+                background-color: rgba(237, 238, 241, 0.7);
+                border-color: rgba(237, 238, 241, 0.7);
+                color: #222222;
+
+            }
+        }
+
+        &:active {
+            background-color: rgba(78, 91, 115, 0.9);
+            border-color: rgba(78, 91, 115, 0.9);
+            color: #222222;
+
+            &:hover,
+            &:focus {
+                background-color: rgba(78, 91, 115, 0.9);
+                border-color: rgba(78, 91, 115, 0.9);
+                color: #222222;
+            }
+        }
+
+    }
+
+}
+
+
+
+button.expandall,
+.btn.expandall {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+button.btn-reveal,
+.btn.btn-reveal {
+    margin: 0.5rem auto 1.5rem;
+}
+
+/*========= Button Focus Shadows Bootstrap Override ==========*/
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    background-color: $button-active-bg;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 111, 191, 0.5);
+    color: #ffffff;
+}
+
+.btn-secondary.focus,
+.btn-secondary:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-secondary.dropdown-toggle:focus {
+    background-color: #edeef1;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 111, 191, 0.5);
+    color: #222222;
+}
+
+/*========= Links ==========*/
+
+
+a.new-window:not(.no-icon)::after,
+a.download:not(.no-icon)::after {
+    content: '';
+    height: 17px;
+    width: 17px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    margin-left: 0.35rem;
+}
+
+a.new-window:not(.no-icon)::after,
+a.download:not(.no-icon)::after {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 0.35rem;
+}
+
+a.new-window:not(.no-icon)::after {
+    content: '\f35d';
+}
+
+a.download:not(.no-icon)::after {
+    content: '\f019';
+}

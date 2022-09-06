@@ -1,0 +1,24 @@
+/* **************************************************
+ * Generic, reusable classes
+ * *************************************************/
+
+// hidden class
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+// Hide text (from WET)
+.wb-inv {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.btn-disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}

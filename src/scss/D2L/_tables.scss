@@ -1,0 +1,176 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/*========= Tables ==========*/
+table {
+    border-radius: 5px;
+    border-collapse: initial;
+    border-spacing: 0;
+}
+
+:not(.table-reveal).table tbody tr:nth-child(even) {
+    background: #edeef1;
+}
+
+.table-responsive,
+.table {
+    overflow-y: hidden;
+    color: #222222;
+    /* Table border bottom radius removed if caption present */
+}
+
+.table-responsive caption,
+.table caption {
+    font-size: 1rem;
+    font-style: oblique;
+    color: #222222;
+    padding-bottom: 1.875rem;
+    vertical-align: middle;
+    min-height: 1.25rem;
+    text-align: center;
+    font-weight: 400;
+    /* Table Caption border - comment out if not needed in design */
+    border-top: none;
+    border-right: 1px solid #c9cdd4;
+    border-left: 1px solid #c9cdd4;
+    border-bottom: 1px solid #c9cdd4;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .table-responsive caption,
+    .table caption {
+        font-size: 1.1875rem;
+    }
+}
+
+.table-responsive thead tr,
+.table thead tr {
+    background: $table-header-bg;
+}
+
+.table-responsive thead th,
+.table thead th {
+    border-top: 1px solid #c9cdd4;
+    border-right: none;
+    border-left: 1px solid #c9cdd4;
+    border-bottom: 1px solid #c9cdd4;
+    color: #222222;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+    padding: 1.0625rem;
+    vertical-align: middle;
+}
+
+.table-responsive thead th:first-child,
+.table thead th:first-child {
+    border-top-left-radius: 5px;
+    border-left: 1px solid #c9cdd4;
+}
+
+.table-responsive thead th:last-child,
+.table thead th:last-child {
+    border-top-right-radius: 5px;
+    border-right: 1px solid #c9cdd4;
+}
+
+.table-responsive thead th p,
+.table-responsive thead th a,
+.table-responsive thead th ol,
+.table-responsive thead th ul,
+.table thead th p,
+.table thead th a,
+.table thead th ol,
+.table thead th ul {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+
+    .table-responsive thead th p,
+    .table-responsive thead th a,
+    .table-responsive thead th ol,
+    .table-responsive thead th ul,
+    .table thead th p,
+    .table thead th a,
+    .table thead th ol,
+    .table thead th ul {
+        font-size: 1.25rem;
+    }
+}
+
+.table-responsive thead th p:last-child,
+.table thead th p:last-child {
+    margin-bottom: 0;
+}
+
+.table-responsive tbody,
+.table tbody {
+    border-bottom-left-radius: 5px;
+}
+
+.table-responsive tbody tr:last-child,
+.table tbody tr:last-child {
+    /* Table border bottom radius - comment out if not needed in design (usually needed if curved border and no border on caption)
+                   */
+}
+
+.table-responsive tbody tr:last-child th:first-child,
+.table-responsive tbody tr:last-child td:first-child,
+.table tbody tr:last-child th:first-child,
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.table-responsive tbody tr:last-child th:last-child,
+.table-responsive tbody tr:last-child td:last-child,
+.table tbody tr:last-child th:last-child,
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.table-responsive tbody td,
+.table-responsive tbody th,
+.table tbody td,
+.table tbody th {
+    padding: 1.25rem;
+    border: 1px solid #c9cdd4;
+    border-right: none;
+    border-top: none;
+    font-size: 1.1875rem;
+}
+
+.table-responsive tbody td:last-child,
+.table-responsive tbody th:last-child,
+.table tbody td:last-child,
+.table tbody th:last-child {
+    border-right: 1px solid #c9cdd4;
+}
+
+.table-responsive tbody th p:last-child,
+.table tbody th p:last-child {
+    margin-bottom: 0;
+}
+
+.table-responsive caption+thead+tbody tr:last-child th:first-child,
+.table-responsive caption+thead+tbody tr:last-child td:first-child,
+.table caption+thead+tbody tr:last-child th:first-child,
+.table caption+thead+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 0;
+}
+
+.table-responsive caption+thead+tbody tr:last-child th:last-child,
+.table-responsive caption+thead+tbody tr:last-child td:last-child,
+.table caption+thead+tbody tr:last-child th:last-child,
+.table caption+thead+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 0;
+}
+
+.table-responsive tbody>tr>th,
+.table tbody>tr>th {
+    border-left: 1px solid #c9cdd4;
+}

@@ -1,0 +1,79 @@
+@use '../colors'as *;
+@use'../mobile'as *;
+
+/*========= Breakpoints ==========*/
+/*** Small - SM ***/
+/*** Medium - MD ***/
+/*** Large - LG ***/
+/*** Extra large - XLG ***/
+/*========= Color Variables ==========*/
+/* Buttons */
+/*========= Original Color Variables ==========*/
+/*========= Fonts ==========*/
+/* Font family for course */
+/* font sizing converted to rem - worked off of https://snook.ca/archives/html_and_css/font-size-with-rem */
+/*========= Bootstrap Resets ==========*/
+.card-header {
+    background-color: $system-gray;
+}
+
+/*========= Default CSS Values ==========*/
+/* Setting default colour font family and size/scale */
+html,
+body {
+
+    /* Fix for iOS 12 jumping back to top of page issue in Lessons - causes an issue in Classic Content view in iOS 12 with no scroll option/pages cut off
+     height: 100%;
+     overflow: auto;
+     -webkit-overflow-scrolling: touch;
+     */
+    /** Needed for splash layout**/
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* Setting max width of container-fluid */
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Code snippets - allows text to wrap and avoids horizontal scroll bar */
+pre,
+pre.card {
+    margin-top: 1.25rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+pre code,
+pre.card code {
+    white-space: pre-wrap;
+    padding: 1.25rem;
+}
+
+/* Hides the source backgroung image for elements using the backgroundimage.js script */
+.bg-img-wrapper {
+    background-size: cover;
+}
+
+.bg-img-wrapper img:first-child {
+    display: none;
+}
+
+/* Old hidden-sm from previous template */
+@media (max-width: 576px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
