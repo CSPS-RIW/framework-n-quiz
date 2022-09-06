@@ -32,7 +32,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./dist/
+          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -40,6 +40,7 @@ jobs:
         run: |
          npm install
          npm run build
+         cd ./dist/
           
   # Deployment job
   deploy:
