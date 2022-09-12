@@ -19,7 +19,7 @@
   "author": "CSPS",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.9",
     "browser-sync": "^2.27.10",
     "cssnano": "^5.1.13",
     "gulp": "^4.0.2",
